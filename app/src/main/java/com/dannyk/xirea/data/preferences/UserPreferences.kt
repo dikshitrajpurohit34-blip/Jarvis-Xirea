@@ -20,7 +20,7 @@ class UserPreferences(private val context: Context) {
     }
     
     val isDarkTheme: Flow<Boolean> = context.dataStore.data.map { preferences ->
-        preferences[DARK_THEME_KEY] ?: false
+        preferences[DARK_THEME_KEY] ?: true
     }
     
     val selectedModelId: Flow<String?> = context.dataStore.data.map { preferences ->
