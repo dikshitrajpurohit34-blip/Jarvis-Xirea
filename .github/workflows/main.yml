@@ -1,6 +1,6 @@
 name: Build JARVIS Xirea APK
 
-on:
+"on":
 workflow_dispatch:
 push:
 branches:
@@ -38,13 +38,6 @@ steps:
 
   - name: Set up Gradle
     uses: gradle/actions/setup-gradle@v4
-
-  - name: Prepare llama.cpp
-    run: |
-      mkdir -p app/src/main/cpp
-      if [ ! -f app/src/main/cpp/llama.cpp/CMakeLists.txt ]; then
-        git clone --depth 1 https://github.com/ggml-org/llama.cpp.git app/src/main/cpp/llama.cpp
-      fi
 
   - name: Build debug APK
     run: |
