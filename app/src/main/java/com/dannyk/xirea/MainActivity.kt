@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         val app = application as XireaApplication
         
         setContent {
-            val isDarkTheme by app.userPreferences.isDarkTheme.collectAsState(initial = false)
+            val isDarkTheme by app.userPreferences.isDarkTheme.collectAsState(initial = true)
             
             XireaTheme(darkTheme = isDarkTheme) {
                 Surface(
