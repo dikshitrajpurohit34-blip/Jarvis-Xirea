@@ -29,32 +29,33 @@ val OnSurfaceVariantLight = Color(0xFF64748B)
 val OutlineLight = Color(0xFFCBD5E1)
 val OutlineVariantLight = Color(0xFFE2E8F0)
 
-// ===== DARK THEME PALETTE =====
-// A sophisticated dark palette with deep navy/slate and vibrant accents
+// ===== DARK THEME PALETTE (JARVIS) =====
+ // Deep navy background with bright cyan accents
+ val PrimaryDark = Color(0xFF00D9FF)
+ val OnPrimaryDark = Color(0xFF070B14)
+ val PrimaryContainerDark = Color(0xFF003A4D)
+ val OnPrimaryContainerDark = Color(0xFF80E8FF)
 
-val PrimaryDark = Color(0xFF818CF8)        // Soft Indigo
-val OnPrimaryDark = Color(0xFF1E1B4B)
-val PrimaryContainerDark = Color(0xFF3730A3)
-val OnPrimaryContainerDark = Color(0xFFE0E7FF)
+ val SecondaryDark = Color(0xFF00AFCB)
+ val OnSecondaryDark = Color(0xFF070B14)
+ val SecondaryContainerDark = Color(0xFF003B4A)
+ val OnSecondaryContainerDark = Color(0xFF80E0F0)
 
-val SecondaryDark = Color(0xFF2DD4BF)      // Bright Teal
-val OnSecondaryDark = Color(0xFF042F2E)
-val SecondaryContainerDark = Color(0xFF0F766E)
-val OnSecondaryContainerDark = Color(0xFFCCFBF1)
+ val TertiaryDark = Color(0xFF00D9FF)
+ val OnTertiaryDark = Color(0xFF070B14)
 
-val TertiaryDark = Color(0xFFE879F9)       // Bright Fuchsia
-val OnTertiaryDark = Color(0xFF4A044E)
+ val BackgroundDark = Color(0xFF070B14)
+ val OnBackgroundDark = Color(0xFFE2E8F0)
 
-val BackgroundDark = Color(0xFF0B0F1A)     // Deep midnight
-val OnBackgroundDark = Color(0xFFE2E8F0)   // Soft white
-val SurfaceDark = Color(0xFF111827)         // Dark navy
-val OnSurfaceDark = Color(0xFFF1F5F9)       // Near-white
+ val SurfaceDark = Color(0xFF101827)
+ val OnSurfaceDark = Color(0xFFF1F5F9)
 
-val SurfaceVariantDark = Color(0xFF1E293B)  // Slate
-val OnSurfaceVariantDark = Color(0xFF94A3B8)
+ val SurfaceVariantDark = Color(0xFF1A2438)
+ val OnSurfaceVariantDark = Color(0xFF94A3B8)
 
-val OutlineDark = Color(0xFF334155)
-val OutlineVariantDark = Color(0xFF1E293B)
+ val OutlineDark = Color(0xFF2D3A4F)
+ val OutlineVariantDark = Color(0xFF1A2438)
+
 
 // ===== SHARED STATUS COLORS =====
 val SuccessColor = Color(0xFF10B981)
