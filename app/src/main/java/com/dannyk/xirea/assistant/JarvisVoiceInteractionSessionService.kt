@@ -6,7 +6,8 @@ import android.service.voice.VoiceInteractionSessionService
 
 class JarvisVoiceInteractionSessionService : VoiceInteractionSessionService() {
 
-    override fun onNewSession(args: Bundle): VoiceInteractionSession {
-        return JarvisVoiceInteractionSession(this)
-    }
+override fun onNewSession(args: Bundle?): VoiceInteractionSession {
+    return JarvisVoiceInteractionSession(this)
+}
+
 }
