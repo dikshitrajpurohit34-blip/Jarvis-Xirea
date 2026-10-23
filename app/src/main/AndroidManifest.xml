@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
@@ -5,22 +6,23 @@
     <!-- Internet permission for downloading models -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
+
     <!-- Foreground service permission for background downloads -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
-    
+
     <!-- Wake lock to keep CPU active during downloads -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    
+
     <!-- Notification permission for Android 13+ -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <!-- Microphone permission for voice input -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    
+
     <!-- Storage permissions for importing local models -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
@@ -36,7 +38,8 @@
         android:theme="@style/Theme.Xirea"
         android:largeHeap="true"
         tools:targetApi="31">
-        
+
+        <!-- Main JARVIS app screen -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -46,14 +49,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <!-- Download Service for background model downloads -->
+
+        <!-- Existing background download service -->
         <service
             android:name=".service.DownloadService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
-        
+
+        <!-- JARVIS voice interaction service -->
+        <service
+            android:name=".assistant.JarvisVoiceInteractionService"
+            android:permission="android.permission.BIND_VOICE_INTERACTION"
+            android:exported="true">
+            <meta-data
+                android:name="android.voice_interaction"
+                android:resource="@xml/voice_interaction" />
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService" />
+            </intent-filter>
+        </service>
+
+        <!-- JARVIS voice interaction session service -->
+        <service
+            android:name=".assistant.JarvisVoiceInteractionSessionService"
+            android:permission="android.permission.BIND_VOICE_INTERACTION"
+            android:exported="true" />
+
     </application>
 
 </manifest>
